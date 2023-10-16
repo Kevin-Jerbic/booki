@@ -410,7 +410,7 @@ footer ul li {
         margin-bottom: 20px;
     }
     .filters .filter-item {
-        width: 140px;
+        /* width: 140px; */
     }
     /****** Hébergements & Populaires ***********/
     .hebergements-and-populaires {
@@ -474,13 +474,13 @@ footer ul li {
         padding: 0;
         text-align: center;
         width: 49%;
+        padding-bottom: 15px;
     }
     header nav ul li:hover {
-        text-underline-offset: 0.9rem;
+        text-underline-offset: unset;
         /* Obligé de passer sur une border car text-underline ne s'applique pas aux li mais aux a */
         text-decoration: none;
         border-bottom: 2px solid var(--main-blue);
-        padding-bottom: 15px;
     }
 
     /****** Hero Bandeau ***********/
@@ -488,7 +488,7 @@ footer ul li {
         margin: 20px 20px 35px 20px;
     }
     form input {
-        max-width: 11rem;
+        max-width: 9rem;
     }
     #search {
         border-radius: 15px;
@@ -504,17 +504,19 @@ footer ul li {
        margin-left: 0;
     }
     .filters-items {
-        display: grid;
-        grid-template-columns: 160px 160px;
+        flex-wrap: wrap;
         gap: 20px 10px;
+        /* display: grid;
+        grid-template-columns: 160px 160px; */
     }
     .filters .filter-item:not(:first-child) {
-        margin-left: 0;
+        /* margin-left: 0; */
     }
     .filters .filter-item {
-        width: 130px;
         margin-right: 0;
-        padding: 10px 15px;
+        width: 110px;
+        font-size: 0.87rem;
+        /* padding: 10px 15px; */
     }
    
     /****** Hébergements & Populaires ***********/
@@ -564,11 +566,14 @@ footer ul li {
 
     /****** Activités ***********/
     .activites {
-        padding-bottom: 65px;
+        padding-bottom: 35px;
     }
     .activites-cards {
         flex-direction: column;
         gap: 15px;
+    }
+    .activites-cards .card img {
+        height: 141px;
     }
 
     /****** Footer ***********/
@@ -578,18 +583,5 @@ footer ul li {
     }
     .footnav-nos-hebergements, .footnav-assistance {
         margin-top: 50px;
-    }
-}
-
-@media (max-width: 354px) {
-    form {
-        text-align: center;
-    }
-    form input {
-        width: 9rem;
-        padding: 15px 10px;
-    }
-    .filters-items {
-        grid-template-columns: 1fr;
     }
 }
